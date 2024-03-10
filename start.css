@@ -1,0 +1,334 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-content: center;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    resize: both;
+}
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+.header
+{
+    max-width: 400px;
+}
+.blue
+{
+  color: blue;
+}
+/*naglowek*/
+.marhey{
+    font-family: "Marhey";
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+    font-size: 6rem;
+    color:white;
+  }
+  .glowny
+  {
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    padding: 0.8rem;
+    gap:1rem;
+    box-shadow: 1px 1px 10px 1px black;
+    z-index: 3;
+  }
+  .kod
+  {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .lacznik
+  {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif
+  }
+  .dolacz,.tworz
+  {
+    background-color: hsl(0, 0%, 20%);
+    border: 1px solid black;
+    color:white;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .dolacz:hover, .tworz:hover
+  {
+    scale:0.95 ;
+  }
+  .opcje
+  {
+      background-color: white;
+      display: none;
+      grid-template-columns: repeat(2,1fr);
+      gap:1rem;
+      padding: 1rem;
+      margin-right: auto;
+      margin-left: auto;
+      font-size:1.2rem;
+      box-shadow: 1px 1px 10px 1px black;
+      z-index: 3;
+  }
+  .create 
+  {
+      grid-column: 1/3;
+      padding: 1rem;
+      border: none;
+      background-color: hsl(0, 0%, 20%);
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  .create:hover
+  {
+      scale: 0.95;
+  }
+  .edytor-btn
+  {
+      grid-column: 2/3;
+      cursor: pointer;
+      font-style: italic;
+  }
+.edytor-btn:hover
+{
+    text-decoration: underline;
+}
+.profil
+{
+    display: none;
+    background-color: white;
+    padding: 1.25rem;
+    gap:1rem;
+    font-size: 2rem;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 3;
+}
+button
+{
+    font-weight: bold;
+    color:white;
+    background-color: hsl(0, 0%, 20%);
+    cursor: pointer;
+    font-size: 4rem;
+}
+.dolacz,.btn{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.dolacz:hover,.btn:hover
+{
+    scale:0.95;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: 1px solid purple;
+    cursor: pointer;
+}
+.nick
+{
+    font-size: 2rem;
+    border: 1px solid black;
+}
+.center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatary
+{   
+    position: absolute;
+    z-index: 5;
+}
+.close
+{
+    padding: 1rem;
+    transition: 1s;
+}
+.close:hover
+{
+    background-color: red;
+}
+.ikony
+{
+    background-color: white;
+    display: none;
+    gap:1rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+}
+.icon-reply-1,.icon-info
+{
+    color:black;
+    height: 40px;
+    top: 20px;
+    position: relative;
+    background-color: white;
+    margin-left: 50%;
+    margin-right: 40%;
+    text-align: center;
+    transition: 1s;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    min-width: 2rem;
+    z-index: 2;
+    grid-row: 1/2;
+}
+.line
+{
+    display: grid;
+    justify-content: right;
+    grid-template-rows: 1fr;
+    gap:0.5rem;
+}
+@keyframes up
+{
+    0%{top:20px;}
+    100%{top:0px}
+}
+.icon-reply-1:hover
+{
+    background-color: red;
+    color:white;
+    animation: up 1s ease-in both;
+}
+.icon-info:hover
+{
+    background-color: orange;
+    color:white;
+    animation: up 1s ease-in both;
+}
+.edytor
+{
+    background-color: white;
+    display: none;
+    gap:1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 10px 1px black;
+    font-size: 2rem;
+    z-index: 3;
+}
+.quiz-list
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.btn-add
+{
+    display: grid;
+    grid-column: 1/4;
+}
+.naglowek
+{
+    grid-column: 1/4;
+    border-bottom: 1px solid black;
+}
+.nazwa-quiz
+{
+    grid-column: 1/2;
+}
+.quiz-edit
+{
+    gap:1rem;
+    grid-column: 1/4;
+    font-size: 2rem;
+}
+.icon-cancel:hover
+{
+    color:white;
+}
+.icon-red, a .icon-wrench
+{
+    color:black;
+}
+.icon-red:hover
+{
+    color:red;
+}
+.icon-wrench:hover
+{
+    color:brown;
+}
+.icon
+{
+    transition:1s;
+    cursor: pointer;
+}
+a
+{
+    color:black;
+}
+.add-quiz, .add-category
+{
+    grid-column: 1/2;
+    background-color: white;
+    color:green;
+    transition:1s;
+}
+.add-quiz{
+    grid-column: 1/4;
+}
+.add-quiz:hover, .add-category:hover
+{
+    background-color:green;
+    color:white;
+}
+.cancel-quiz
+{
+    grid-column: 2/4;
+    background-color: white;
+    color:red;
+    transition:1s;
+    
+}
+.cancel-quiz:hover
+{
+    background-color:red;
+    color:white;
+}
+.nowy-quiz
+{
+    position: absolute;
+    display: none;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1rem;
+    gap:1rem;
+    z-index: 5;
+    border: 1px solid black;
+}
+.category
+{
+    grid-column: 1/3;
+    font-size: 1.5rem;
+}
